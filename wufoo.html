@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Wufoo Clone</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+body{
+    background:#669900;
+    min-height:100vh;
+    padding:50px 20px;
+}
+
+/* MAIN WRAPPER */
+
+.wrapper{
+    width:100%;
+    max-width:780px;
+    margin:auto;
+}
+
+/* FORM CARD */
+
+.form-card{
+    background:#f5f5f5;
+    border:1px solid #222;
+}
+
+/* HEADER */
+
+.top-bar{
+    background:#99cc00;
+    padding:20px 28px;
+    border-bottom:1px solid #222;
+}
+
+.top-bar img{
+    width:200px;
+}
+
+/* CONTENT */
+
+.content{
+    padding:28px;
+}
+
+.title{
+    font-size:25px;
+    color:#111;
+    margin-bottom:12px;
+    font-weight:normal;
+}
+
+.subtitle{
+    color:#444;
+    margin-bottom:28px;
+    font-size:17px;
+}
+
+.divider{
+    border:none;
+    border-top:1px dotted #bdbdbd;
+    margin-bottom:25px;
+}
+
+/* GRID */
+
+.row{
+    display:grid;
+    gap:18px;
+    margin-bottom:28px;
+}
+
+.row.two{
+    grid-template-columns:1fr 1fr;
+}
+
+.row.three{
+    grid-template-columns:1fr 1fr 1fr;
+}
+
+.row.four{
+    grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.row.five{
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+}
+
+/* FIELD */
+
+.field label{
+    display:block;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:8px;
+    color:#333;
+}
+
+.field input{
+    width:100%;
+    height:32px;
+    border:1px solid #bbb;
+    background:white;
+    padding:5px 8px;
+    outline:none;
+}
+
+.field input:focus{
+    border:1px solid #7fbf00;
+    box-shadow:0 0 4px rgba(127,191,0,.6);
+}
+
+.instructions{
+    margin-top:10px;
+    color:#555;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* BUTTON */
+
+.submit-btn{
+    padding:8px 18px;
+    border:1px solid #444;
+    background:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:.2s;
+}
+
+.submit-btn:hover{
+    background:#efefef;
+}
+
+/* CAPTCHA */
+
+.captcha{
+    margin-top:55px;
+    color:#666;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.captcha a{
+    color:#0066cc;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    margin-top:18px;
+    color:#444;
+}
+
+.footer img{
+    width:125px;
+    margin-bottom:6px;
+}
+
+.footer a{
+    color:#0055cc;
+}
+
+/* SUCCESS PAGE */
+
+.success-card{
+    display:none;
+    background:#f5f5f5;
+    border:1px solid #222;
+}
+
+.success-header{
+    background:#99cc00;
+    padding:15px 20px;
+}
+
+.success-header img{
+    width:170px;
+}
+
+.success-message{
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:20px;
+    color:#333;
+    padding:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .row.five{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .row.four{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .row.three{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .row.two,
+    .row.three,
+    .row.four,
+    .row.five{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:22px;
+    }
+
+    .success-message{
+        font-size:24px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- FORM PAGE -->
+
+    <div class="form-card" id="formPage">
+
+        <!-- HEADER -->
+
+        <div class="top-bar">
+
+            <a href="https://www.wufoo.com/?utm_source=form-header&utm_medium=logo" target="_blank">
+
+                <img src="wufoo_logo_white.png" alt="wufoo_logo_white">
+
+            </a>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+            <h1 class="title">Two, Three, Four, Five</h1>
+
+            <p class="subtitle">
+                Lining up fields like a turkey jive.
+            </p>
+
+            <hr class="divider">
+
+            <!-- TWO -->
+
+            <div class="row two">
+
+                <div class="field">
+                    <label>Two</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Two</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+            </div>
+
+            <!-- THREE -->
+
+            <div class="row three">
+
+                <div class="field">
+                    <label>Three</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Three</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Three</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+            </div>
+
+            <!-- FOUR -->
+
+            <div class="row four">
+
+                <div class="field">
+                    <label>Four</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Four</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Four</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Four</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+            </div>
+
+            <!-- FIVE -->
+
+            <div class="row five">
+
+                <div class="field">
+                    <label>Five</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Five</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Five</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+                <div class="field">
+                    <label>Five</label>
+                    <input type="text">
+                    <div class="instructions">
+                        instruction<br>
+                        line 2
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Five</label>
+                    <input type="text">
+                    <div class="instructions">instruction</div>
+                </div>
+
+            </div>
+
+            <!-- EXTRA FIVE -->
+
+            <div class="row">
+
+                <div class="field" style="max-width:180px;">
+                    <label>Five</label>
+                    <input type="text">
+                    <div class="instructions">instructions</div>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button class="submit-btn" onclick="showSuccess()">
+                Submit
+            </button>
+
+            <!-- CAPTCHA -->
+
+            <div class="captcha">
+                This site is protected by reCAPTCHA Enterprise and the Google
+                <a href="https://policies.google.com/privacy">Privacy Policy</a>
+                and
+                <a href="https://policies.google.com/terms">Terms of Service</a>
+                apply.
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer" id="footerSection">
+
+        <a href="https://www.wufoo.com/form-builder/?utm_source=form-footer&utm_medium=cta-link" target="_blank">
+
+            <img src="wufoo_logo.png" width="50px" height="50px">
+
+        </a>
+
+        <p>
+            See how easy it is to
+            <a href="https://www.wufoo.com/form-builder/?utm_source=form-footer&utm_medium=cta-link" target="_blank">
+                create a form.
+            </a>
+        </p>
+
+    </div>
+
+    <!-- SUCCESS PAGE -->
+
+    <div class="success-card" id="successPage">
+
+        <div class="success-header">
+
+            <a href="https://www.wufoo.com" target="_blank">
+
+                <img src="wufoo_logo_white.png" alt="Wufoo Logo">
+
+            </a>
+
+        </div>
+
+        <div class="success-message">
+
+            Success! Thanks for filling out my form!
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function showSuccess(){
+
+    document.getElementById("formPage").style.display = "none";
+
+    document.getElementById("footerSection").style.display = "none";
+
+    document.getElementById("successPage").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
