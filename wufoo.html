@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Wufoo Clone</title>
+<title>Wufoo-form-Clone</title>
 
 <style>
 
@@ -21,7 +21,6 @@ body{
     padding:50px 20px;
 }
 
-/* MAIN WRAPPER */
 
 .wrapper{
     width:100%;
@@ -29,14 +28,13 @@ body{
     margin:auto;
 }
 
-/* FORM CARD */
 
 .form-card{
     background:#f5f5f5;
     border:1px solid #222;
 }
 
-/* HEADER */
+/*for Header */
 
 .top-bar{
     background:#99cc00;
@@ -48,7 +46,7 @@ body{
     width:200px;
 }
 
-/* CONTENT */
+/* for content */
 
 .content{
     padding:28px;
@@ -73,7 +71,7 @@ body{
     margin-bottom:25px;
 }
 
-/* GRID */
+/*for grid */
 
 .row{
     display:grid;
@@ -97,7 +95,7 @@ body{
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
 }
 
-/* FIELD */
+/* field label */
 
 .field label{
     display:block;
@@ -128,7 +126,7 @@ body{
     line-height:1.5;
 }
 
-/* BUTTON */
+/*for submit button */
 
 .submit-btn{
     padding:8px 18px;
@@ -143,7 +141,7 @@ body{
     background:#efefef;
 }
 
-/* CAPTCHA */
+/*for captcha */
 
 .captcha{
     margin-top:55px;
@@ -156,7 +154,7 @@ body{
     color:#0066cc;
 }
 
-/* FOOTER */
+/*footer*/
 
 .footer{
     text-align:center;
@@ -173,7 +171,7 @@ body{
     color:#0055cc;
 }
 
-/* SUCCESS PAGE */
+/*succcess message */
 
 .success-card{
     display:none;
@@ -201,7 +199,6 @@ body{
     padding:15px;
 }
 
-/* RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -243,11 +240,11 @@ body{
 
 <div class="wrapper">
 
-    <!-- FORM PAGE -->
+    <!-- form -->
 
     <div class="form-card" id="formPage">
 
-        <!-- HEADER -->
+        <!-- header -->
 
         <div class="top-bar">
 
@@ -259,7 +256,7 @@ body{
 
         </div>
 
-        <!-- CONTENT -->
+        <!--page content-->
 
         <div class="content">
 
@@ -271,7 +268,7 @@ body{
 
             <hr class="divider">
 
-            <!-- TWO -->
+            <!--Two-->
 
             <div class="row two">
 
@@ -289,7 +286,7 @@ body{
 
             </div>
 
-            <!-- THREE -->
+            <!-- Three -->
 
             <div class="row three">
 
@@ -313,7 +310,7 @@ body{
 
             </div>
 
-            <!-- FOUR -->
+            <!-- Four -->
 
             <div class="row four">
 
@@ -343,7 +340,7 @@ body{
 
             </div>
 
-            <!-- FIVE -->
+            <!-- Five -->
 
             <div class="row five">
 
@@ -382,8 +379,6 @@ body{
 
             </div>
 
-            <!-- EXTRA FIVE -->
-
             <div class="row">
 
                 <div class="field" style="max-width:180px;">
@@ -394,13 +389,13 @@ body{
 
             </div>
 
-            <!-- BUTTON -->
+            <!--Submit Button-->
 
             <button class="submit-btn" onclick="showSuccess()">
                 Submit
             </button>
 
-            <!-- CAPTCHA -->
+            <!-- captcha -->
 
             <div class="captcha">
                 This site is protected by reCAPTCHA Enterprise and the Google
@@ -414,7 +409,7 @@ body{
 
     </div>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
 
     <div class="footer" id="footerSection">
 
@@ -433,7 +428,7 @@ body{
 
     </div>
 
-    <!-- SUCCESS PAGE -->
+    <!-- Success page -->
 
     <div class="success-card" id="successPage">
 
